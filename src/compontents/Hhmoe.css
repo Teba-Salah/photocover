@@ -1,0 +1,232 @@
+/* body{background-color: #0D1A2B;} */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.start {
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(rgba(10, 0, 48, 0), rgba(10, 0, 48, 0)), url('./imges/home4 (1).png');
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 700px; /* إضافة مسافة من الحافة اليسرى */
+}
+
+/* رفع الكتابة قليلاً إلى الأعلى */
+
+.hero-content {
+  max-width: 600px;
+  margin-left: 0;
+  margin-top: -30px; /* رفع المحتوى قليلاً للأعلى */
+  animation: fadeInUp 1.5s ease-out; /* تطبيق حركة النص */
+}
+
+.hero-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left:50px ;
+}
+
+.hero-content ,p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    margin-left:50px ;
+    color: #fff;
+}
+h2{  font-size: 1.1em;
+  margin-bottom: 20px;
+  margin-left:50px ;
+  color: #fff;}
+
+  .hero-content h1,
+  .hero-content p,
+  h2 {
+      margin-top: 10px; /* تقليل المسافة العليا */
+      margin-bottom: 10px; /* تقليل المسافة السفلية */
+  }
+  
+
+.see-more {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-bottom: 2px solid #D2793C;
+    animation: fadeInUp 2s ease-out; /* تطبيق الحركة على الزر أيضًا */
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    margin-left:50px ;
+   
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -150px; 
+ 
+  position: relative;
+ 
+ 
+}
+.about-section {
+  padding: 30px; /* تقليل الحشوة */
+}
+
+.about-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.about-content h2,
+.about-content p {
+    margin-top: 40px; /* تقليل المسافة العليا */
+    margin-bottom: 30px; /* تقليل المسافة السفلية */
+}
+
+
+.get-started {
+  padding: 10px 20px;
+  background-color: #D2793C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  border-radius: 30px;
+}
+
+.about-image {
+  transition: opacity 0.5s, transform 0.5s; /* لتأثير الانتقال */
+}
+
+.about-image img {
+  width: 600px;
+  height: 850px;
+  margin-right: 90px;
+}
+
+.about-content,
+.about-image {
+    opacity: 0; /* جعل العناصر مخفية في البداية */
+    transition: opacity 0.5s, transform 0.5s; /* انتقال سلس */
+}
+
+/* CSS للتأثير عند الظهور */
+.about-content.appear {
+    opacity: 1; /* جعل العنصر مرئي */
+    transform: translateX(0); /* ضبطه على وضعه الطبيعي */
+}
+
+.about-image.appear {
+    opacity: 1; /* جعل العنصر مرئي */
+    transform: translateX(0); /* ضبطه على وضعه الطبيعي */
+}
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero-section,
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img,
+    .about-image img {
+      max-width: 100%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .auth-buttons {
+      flex-direction: column;
+    }
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 400px; /* يمكنك تعديل الارتفاع */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .dot.active {
+    background-color: #D2793C; /* لون مميز للنقطة النشطة */
+    opacity: 1;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .slide {
+      height: 300px; /* تصغير الارتفاع للشاشات الأصغر */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slide {
+      height: 200px; /* تصغير الارتفاع أكثر */
+    }
+  }
+  
+  .carts{background-color:#0D1A2B;}
+  .productImage{display:inline;}
+
+ 

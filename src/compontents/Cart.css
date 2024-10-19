@@ -1,0 +1,97 @@
+.cards-container {
+    display: flex;
+    justify-content: center; /* وضع الكروت في المنتصف */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    width: 90%; /* تقليل العرض لإضافة هوامش على الجانبين */
+    margin: 0 auto; /* لجعل الكروت في المنتصف أفقياً */
+    margin-top: 20px;
+  }
+  
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 50px;
+    margin-left: 0; /* توجيه العنوان إلى اليسار */
+    color: #fff;
+    text-align: left; /* جعل النص على اليسار */
+    padding-left: 5%; /* ضبط العنوان ليكون في مستوى الكروت */
+  }
+  
+  .card {
+    background-color: #416676;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    flex-basis: 30%;
+    position: relative;
+    color: white;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    margin-bottom: 20px; /* إضافة مسافة بين الكروت */
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
+    text-align: left; /* التأكد من أن النص في أسفل الكارت يتم وضعه بشكل محاذي لليسار */
+    color: white;
+    display: flex;
+    flex-direction: column; /* وضع النصوص في أسفل الكارت بشكل عمودي */
+    justify-content: flex-start; /* جعل النصوص في بداية الكارت (من الأعلى إلى الأسفل) */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: absolute; /* جعل العنوان في أعلى الكارت */
+    top: 70px; /* رفع العنوان إلى الأعلى */
+    left: 15px; /* محاذاة العنوان إلى اليسار */
+  }
+  
+  .card-date, .card-time, .card-location, .card-speaker {
+    font-size: 1rem;
+    margin: 0; /* إزالة أي هوامش إضافية */
+    padding: 2px 0; /* وضع مسافة صغيرة بين النصوص */
+  }
+  
+  .card-date {
+    font-size: 1.2rem;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px #fff;
+  }
+  
+  .card.active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(139, 192, 208, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+        flex-basis: 45%; /* عرض الكارت 45% للشاشات الأصغر */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+        flex-basis: 100%; /* عرض الكارت 100% للشاشات الأصغر */
+    }
+  }
+  

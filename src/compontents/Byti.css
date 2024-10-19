@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.containerss {
+    text-align: center;
+    background-color: #fdf8f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px; /* إضافة هوامش أسفل h4 */
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.time-box {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; /* استخدام flex لتسهيل المحاذاة */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    justify-content: center; /* ضمان أن العناصر محاذاة في المنتصف */
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.time-box p {
+    font-size: 1rem;
+    margin-right: 40px;
+    margin-top: 10px;
+    color: #888;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.ticket {
+    background-color: #ff7f0e;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}

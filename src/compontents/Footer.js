@@ -21,6 +21,8 @@ const Footer = () => {
             <li>Sponsor</li>
             <li>Gallery</li>
             <li>Speakers</li>
+
+
           </ul>
         </div>
 

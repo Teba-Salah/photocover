@@ -2,14 +2,17 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .last {
-    width: 80%;
+    width: 100%;
     margin: 10rem auto;
-    height: 570px;
-    position: relative; 
+    height: 500px;
+    position: relative;
+   margin-bottom: 150px;
+   margin-top: 150px;
+ 
 }
 
 .slide img {
-    width: 20rem;
+    width: 17rem;
     margin: 0 auto;
 }
 
@@ -22,14 +25,14 @@
 .activeSlide {
     transform: scale(1.1);
     opacity: 1;
+    cursor: pointer; /* جعل السلايد القابل للنقر يكون به مؤشر اليد */
 }
 
 .arrow {
-   
     position: absolute;
     cursor: pointer;
     z-index: 10;
-    color: white; 
+    color: white;
 }
 
 .arrow svg {
@@ -38,7 +41,7 @@
 }
 
 .arrow svg:hover {
-    color: #68edff;
+    color: #c06d21;
 }
 
 .next {
@@ -51,12 +54,21 @@
     top: 50%;
 }
 
-
 .title {
-    position: absolute; 
-    left: -40px;
+    position: absolute;
+    left: 80px;
     bottom: 570px;
-    color: white; 
-    font-size: 32px;
-    z-index: 15; 
+    color: white;
+    font-size:2rem;
+    z-index: 15;
+}
+
+/* تخصيص النقاط */
+.slick-dots li button:before {
+    color: white; /* لون النقاط */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #bd6c20;
+    /* لون النقطة النشطة */
 }

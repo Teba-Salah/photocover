@@ -4,6 +4,7 @@ import './Navbar.css'; // لاستيراد ملف CSS
 import { Link } from 'react-router-dom';
 
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -23,18 +24,18 @@ const Navbar = () => {
       {/* Desktop Nav Links */}
       <ul className="nav-links">
         <li><a href="#home"><Link to="/Hhome">HOME</Link></a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#create">CREATE YOUR EVENT</a></li>
-        <li><a href="#events">EVENTS</a></li>
-        <li><a href="#tickets">TICKETS</a></li>
-        <li><a href="#blogs">BLOGS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#about"><Link to="/About">ABOUT</Link></a></li>
+        <li><a href="#create"><Link to="/CreateYourEvent">Create Your Event</Link></a></li>
+        <li><a href="#events"> <Link to="/Event">EVENTS</Link></a></li>
+        <li><a href="#tickets"><Link to="/Ti">TICKETS</Link></a></li>
+         <li><a href="#blogs"><Link to="/BBlogs">BLOGS</Link></a></li> 
+        <li><a href="#contact"><Link to="/Contact">Contact</Link></a></li>
       </ul>
 
       {/* Desktop Auth Buttons */}
       <div className="auth-buttons">
         <button className="sign-in"><Link to="/login" className="singgg">Login</Link></button>
-        <button className="sign-up"><Link to="/Signup" className="singgg">Sign in</Link></button>
+        
       </div>
 
       {/* Mobile Menu */}
@@ -50,7 +51,7 @@ const Navbar = () => {
         <a href="#blogs">BLOGS</a>
         <a href="#contact">CONTACT</a>
         <button className="sign-inn"><Link to="/login" className="singgg">Login</Link></button>
-        <button className="sign-upp"><Link to="/Signup" className="singgg">Sign in</Link></button>
+       
       </div>
     </nav>
   );

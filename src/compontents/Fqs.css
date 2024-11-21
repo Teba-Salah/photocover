@@ -1,0 +1,106 @@
+/* FAQ Container */
+.faq-container {
+  display: flex;
+  color: #ffffff;
+  padding: 2rem;
+  max-width: 1000px;
+  margin-left: 430px;
+  margin-top:150px;
+}
+
+/* Left Side (Header) */
+.faq-header {
+  flex: 1;
+  padding-right: 1.5rem;
+  margin-left: -401px;
+}
+
+.faq-header {
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.4;
+  color: #ffffff;
+  
+ 
+}
+
+.faq-header h2 {
+  font-size: 2.5rem; /* Existing styles */
+  /* Added margin for space */
+}
+
+.faq-header h2 span {
+  color: #AF621B;
+}
+
+/* Right Side (FAQ Questions) */
+.faq-content {
+  flex: 1.5;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+ 
+ border-radius: 5px;
+ margin-left: 100px;
+  transition: background-color 0.3s ease;
+}
+
+
+.faq-question h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.faq-arrow {
+  font-size: 1.2rem;
+  border: 1px solid #ffffff;
+  padding: 3px 10px;
+  border-radius:100%;
+  color: #AF621B;
+}
+
+.faq-answer {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  margin-left: 90px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .faq-header {
+      padding-right: 0;
+      margin-bottom: 1rem;
+  }
+
+  .faq-header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem; /* Ensure spacing here too */
+  }
+
+  .faq-question h3 {
+      font-size: 0.9rem;
+  }
+
+  .faq-answer {
+      font-size: 0.8rem;
+  }
+}
+
+  

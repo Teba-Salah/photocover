@@ -1,0 +1,97 @@
+/* CreateYourEvent.css */
+.special-event-form {
+    width: 90%; /* Make it responsive */
+    max-width: 1000px; /* Limit the width for large screens */
+    margin: 50px auto; /* Center the form with margin and create space above */
+    padding: 40px; /* Add padding around the form content */
+    background: linear-gradient(220deg, #2c3e50, #597f98, #0a1422);
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .special-event-form h1{
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .special-form-group {
+    margin-bottom: 20px; /* Increased margin for more space between inputs */
+    position: relative;
+  }z
+  
+  .special-form-group label {
+    color: #fff;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 8px; /* Slight increase in space below the label */
+    font-weight: bold;
+  }
+  
+  .special-form-input,
+  .special-form-textarea,
+  .special-form-file {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid ;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    outline: none;
+  }
+  
+  .special-form-input::placeholder,
+  .special-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .special-form-textarea {
+    min-height: 100px;
+    resize: none;
+   
+  }
+  
+  .special-form-input:focus,
+  .special-form-textarea:focus {
+    border-color: #AF621B;
+  }
+  
+  .special-file-upload {
+    color: white;
+  }
+  
+  .special-form-button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    background-color:#AF621B;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 40px;
+    width: 200px;
+    display: block;
+    margin-left: auto; /* Align the button to the right */
+    margin-right: auto; /* Keep the button centered on mobile */
+  }
+  
+  .special-form-button:hover {
+    background-color: #995612;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .special-event-form {
+      padding: 20px;
+    }
+  
+    .special-form-button {
+      margin-left: auto; /* Ensure the button is centered on smaller screens */
+      margin-right: auto;
+    }
+  }
+input{border-radius: 40px;}  
+

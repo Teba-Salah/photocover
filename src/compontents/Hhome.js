@@ -1,10 +1,13 @@
 import React from 'react';
 import './Hhmoe.css';
-import Cart from './Cart';
 import Lastevent from './Lastevent';
 import Byti from './Byti';
+import Sponse  from './Sponse';
+import Wevent  from './Wevent';
+import Fqs from './Fqs';
 import aboutimg from './imges/Frame 386.png'; // تأكد من استخدام المسار الصحيح
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 
 export function Hhmoe(props) {
@@ -22,12 +25,13 @@ export function Hhmoe(props) {
 
   return (
     <div className="homem">
-      <div className="start container">
+      <div className="start">
         <div className="hero-content">
           <h1>The Ultimate Platform for Planning and Promoting Successful Events</h1>
-          <p>Eventify is a leading event and conference website that brings together industry experts, thought leaders, and enthusiasts from around the world to share knowledge, network, and make lasting connections.</p>
-          
-          <a href="#about" className="see-more">See more about us ↓</a>
+          <p className='pl'>Eventify is a leading event and conference website that brings together industry experts, thought leaders, and enthusiasts from around the world to share knowledge, network, and make lasting connections.</p>
+          <a className="see-more">
+  <Link to="/About" className="link-text"> See more about us  →</Link>
+</a>
         </div>
       </div>
 
@@ -39,9 +43,9 @@ export function Hhmoe(props) {
             transform: textInView ? 'translateX(0)' : 'translateX(-50px)' // الحركة
           }}
         >
-          <h2>WHO WE ARE</h2>
+          <h2 className='hh2'>WHO WE ARE</h2>
           <p>Eventify is a comprehensive platform for organizing and promoting events, conferences, and other industry-related gatherings. Our team of experienced professionals is dedicated to providing unparalleled event management solutions that streamline your event planning process and maximize your ROI. We believe that events are powerful tools for driving growth, innovation, and success, and we're committed to helping you make the most of every event.</p>
-          <button className="get-started">Get Started</button>
+          <button className="get-started"><Link to="/CreateYourEvent" className='singgg'>Get Started </Link> </button>
         </div>
         <div 
           className={`about-image ${imageInView ? 'appear' : ''}`} // إضافة الفئة بناءً على ظهورها
@@ -52,11 +56,13 @@ export function Hhmoe(props) {
         >
           <img src={aboutimg} alt="About Eventify" />
         </div>
-      </section>
-      <Cart/>
-      <Lastevent/>
-      <Byti/>
-     <h1>ghjjkkk</h1>
+      </section><Byti/>
+     <Wevent/>
+     <Lastevent/>
+      <Fqs/>
+      
+     
+      
     </div>
   );
 };

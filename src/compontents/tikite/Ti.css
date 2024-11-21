@@ -1,0 +1,106 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 180vh; 
+
+  }
+  
+  
+  .background-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; /* لجعل الصورة تغطي كامل المساحة */
+  }
+  
+  .content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* لمركز المحتوى */
+    text-align: center; /* لتوسيط النص */
+    color: white; /* لون النص */
+    z-index: 1; /* تأكد أن المحتوى فوق الصورة */
+  }
+ 
+
+
+.event-banner {
+  background-image: url('../imges/view eventes.png'); /* ضع هنا صورة الخلفية */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 50vh;
+  margin-top: 700px;
+}
+
+.event-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.event-text p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.event-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.event-signup input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 250px;
+  max-width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.event-signup button {
+  background-color: #8e44ad;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-signup button:hover {
+  background-color: #6a2c8a;
+}
+
+@media (min-width: 768px) {
+  .event-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .event-text, .event-signup {
+    width: 45%;
+    align-items: flex-start;
+  }
+
+  .event-text h1 {
+    font-size: 3rem;
+  }
+
+  .event-text p {
+    font-size: 1.25rem;
+  }
+
+  .event-signup input {
+    width: 100%;
+  }
+}

@@ -70,7 +70,7 @@ const Login = () => {
             <a href="#">Forgot password?</a>
           </div>
           <button type="submit">Login</button>
-          <div className="register-link">
+          <div className="register-linkss">
             <p>Don't have an account? <Link to="/Signup" className='singgg'>Sign in</Link></p>
           </div>
         </form>

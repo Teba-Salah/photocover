@@ -1,53 +1,46 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import ReactPlayer from 'react-player'; // إضافة مكتبة react-player
+import ReactPlayer from 'react-player';
 import './Lastevents.css';
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const videos = [
-  "https://youtu.be/K-a8s8OLBSE?si=87cB8YuHz19_O10g", // رابط الفيديو الأول
-  "https://youtu.be/eVli-tstM5E?si=cNuZEm1rV7BVbOib", // رابط الفيديو الثاني
-  "https://youtu.be/V9PVRfjEBTI?si=HXnN2WVKkNyRNL5a", // رابط الفيديو الثالث
-  "https://youtu.be/cF1Na4AIecM?si=T3ZCy020-ah1YG-S"  // رابط الفيديو الرابع
+  "https://youtu.be/NBfGDZpUpSA?si=vTJbzLMPlQupd2S1",
+  "https://youtu.be/u_qFlTu7HTw?si=_qnv_1jVIKEM0qu2",
+  "https://youtu.be/kN89S_vflwI?si=Z_kTuxK8S9BYNRu8",
+  "https://shiloh-events.com/wp-content/uploads/2024/08/Homepage-Hero.mp4"
 ];
 
 function Lastevent() {
-  const NextArrow = ({ onClick }) => {
-    return (
-      <div className="arrow next" onClick={onClick}>
-        <FaArrowRight />
-      </div>
-    );
-  };
-
-  const PrevArrow = ({ onClick }) => {
-    return (
-      <div className="arrow prev" onClick={onClick}>
-        <FaArrowLeft />
-      </div>
-    );
-  };
-
   const [videoIndex, setVideoIndex] = useState(0);
 
   const settings = {
-    infinite: true,
+    infinite: true, // تفعيل اللوب
     lazyLoad: true,
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    dots: true, // تفعيل النقاط
+    swipe: true, // تفعيل السحب اليدوي
+    draggable: true, // السماح بالسحب
+    autoplay: true, // تفعيل التشغيل التلقائي
+    autoplaySpeed: 2000, // سرعة التغيير التلقائي (بالميلي ثانية)
+    arrows: false, // إخفاء الأسهم
+
     beforeChange: (current, next) => setVideoIndex(next),
+    afterChange: (current) => setVideoIndex(current),
   };
 
   return (
     <div className='last'>
-      <div className="title">Laste Events</div> {/* العنوان الجديد */}
+      <div className="title">Laste Events</div>
       <Slider {...settings}>
         {videos.map((video, idx) => (
-          <div className={idx === videoIndex ? "slide activeSlide" : "slide"} key={idx}>
+          <div
+            className={idx === videoIndex ? "slide activeSlide" : "slide"}
+            key={idx}
+            onClick={() => setVideoIndex(idx)} // السماح بالانتقال عبر النقر على السلايد
+          >
             <ReactPlayer 
               url={video} 
               controls={true}
@@ -62,3 +55,4 @@ function Lastevent() {
 }
 
 export default Lastevent;
+
